@@ -26,4 +26,9 @@ public class HomeController {
 	public Iterable<Employee> getAllEmployee() {
 		return empRepo.findAll();
 	}
+	
+	@RequestMapping(value="/hello")
+	public String hello() {
+		return "Hello World!";
+	}
 }
