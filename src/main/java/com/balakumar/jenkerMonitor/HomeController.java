@@ -24,8 +24,6 @@ public class HomeController {
 	
 	@RequestMapping(value="/all", method =RequestMethod.GET)
 	public Iterable<Employee> getAllEmployee() {
-		TestBody obj = rServe.someRestCall();
-		System.out.println("Recieved obj : " + obj);
 		return empRepo.findAll();
 	}
 }
